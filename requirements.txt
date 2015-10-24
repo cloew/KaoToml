@@ -1,3 +1,4 @@
 pytoml==0.1.7
 git+git://github.com/cloew/KaoDecorators.git
+git+git://github.com/cloew/KaoDict.git
 wheel==0.24.0

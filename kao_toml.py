@@ -1,7 +1,8 @@
 from kao_dict import KaoDict
-from kao_decorators import lazy_property
+from kao_decorators import lazy_property, proxy_for
 import pytoml
 
+@proxy_for('_toml', ['__iter__', '__contains__', '__len__', '__getitem__', '__setitem__', '__delitem__'])
 class KaoToml(object):
     """ Represents a Toml file """
     INSTANCE_ATTRS = {'_filename', '___toml'}

@@ -72,14 +72,3 @@ class KaoToml(object):
     def _collapseList(self, l):
         """ Wrap the list """
         return [self._collapse(v) for v in l]
-            
-            
-            
-        collapsedDict = {}
-        for key, value in d.items():
-            if type(value) is KaoDict:
-                collapsedDict[key] = self._collapse(value)
-            else:
-                collapsedDict[key] = value
-        
-        return collapsedDict
